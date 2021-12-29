@@ -1,0 +1,2663 @@
+@import 'libs/animation';
+@import 'libs/slick';
+
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: url('../img/home-bg.svg') no-repeat 40% 100%;
+    background-size: cover;
+    .home-content{
+        transform: translate(0, 38px);
+    }
+    .home-nav{
+        display: none;
+    }
+    .home-slider{
+        .home-item{
+            position: relative;
+            .title{
+                padding: 0 16px 2px;
+                span{
+                    font-size: 28px;
+                    color: #B2B4C7;
+                    font-weight: 300;
+                    line-height: 32px;
+                    padding-left: 2px;
+                    margin-bottom: 6px;
+                    display: inline-block;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    font-family: 'Carmen Sans Thin';
+                }
+                h2{
+                    font-size: 60px;
+                    color: #1D1F3B;
+                    font-weight: 800;
+                    line-height: 55px;
+                    margin-bottom: 6px;
+                    letter-spacing: 1px;
+                    font-family: 'Carmen Sans ExtraBold';
+                }
+                ul{
+                    display: flex;
+                    align-items: center;
+                    li{
+                        margin: 0 3px;
+                        font-size: 12px;
+                        color: #117FFE;
+                        font-weight: 500;
+                        line-height: 20px;
+                        font-family: 'Carmen Sans Medium';
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .item{
+                height: 445px;
+                display: flex;
+                position: relative;
+                align-items: flex-start;
+                justify-content: center;
+                a{
+                    top: 0;
+                    left: 0;
+                    z-index: 8;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                }
+                a:hover + p{
+                    letter-spacing: 3px;
+                }
+                svg{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 2;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    transition: all 2s;
+                }
+                .human{
+                    z-index: 6;
+                    width: 100px;
+                    display: flex;
+                    max-width: initial;
+                    position: relative;
+                }
+                p{
+                    left: 4px;
+                    z-index: 5;
+                    width: 100%;
+                    bottom: 21px;
+                    font-size: 8px;
+                    color: #1D1F3B;
+                    cursor: pointer;
+                    line-height: 20px;
+                    text-align: center;
+                    text-align: center;
+                    position: absolute;
+                    font-weight: normal;
+                    letter-spacing: 7px;
+                    text-transform: uppercase;
+                    transition: all 0.4s;
+                }
+            }
+        }
+        .business{
+            .title{
+                ul{
+                    li{
+                        color: #117FFE;
+                    }
+                }
+            }
+            .item{
+                svg{
+                    width: 230px;
+                    transform: translate(-50%,-62%);
+                }
+                .stripes1{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(-85deg);
+                    transition-delay: 0.2s;
+                    transition: all 1s;
+                    img{
+                        right: -7%;
+                        bottom: 11%;
+                        width: 210px;
+                        position: absolute;
+                    }
+                }
+                .stripes2{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(-65deg);
+                    transition-delay: 0.3s;
+                    transition: all 1.2s;
+                    img{
+                        left: 1%;
+                        top: 9.6%;
+                        width: 140px;
+                        position: absolute;
+                    }
+                }
+                .stripes3{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(-85deg);
+                    transition-delay: 0.2s;
+                    transition: all 1s;
+                    img{
+                        left: 11%;
+                        bottom: 6%;
+                        width: 100px;
+                        position: absolute;
+                    }
+                }
+                .stripes4{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    display: none;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(-125deg);
+                    transition-delay: 0.3s;
+                    transition: all 1.2s;
+                    img{
+                        position: absolute;
+                    }
+                }
+                .business-stripes{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 2;
+                    width: 720px;
+                    height: 400px;
+                    position: absolute;
+                    transform: translate(-50%,-64%);
+                    transition-delay: 0.3s;
+                }
+                .human-content{
+                    z-index: 3;
+                    opacity: 0;
+                    position: relative;
+                    transform: translate(0, 30%);
+                    transform-origin: center center;
+                    transition-property: all;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.2s;
+                    transition-timing-function:cubic-bezier(0.0, 0.0, 0.58, 1.0);
+                }
+                .human-gradient{
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    position: absolute;
+                    transform: translate(2px,-4px);
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+                .human{
+                    z-index: 1;
+                    width: 143px;
+                    transform: translate(2px,-4px);
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+                .layer{
+                    z-index: 1;
+                    position: relative;
+                }
+                .layer2{
+                    top: 0;
+                    left: 0;
+                    z-index: 0;
+                    width: 100%;
+                    opacity: 0.7;
+                    height: 100%;
+                    position: absolute;
+                }
+            }
+        }
+        .soul{
+            .title{
+                ul{
+                    li{
+                        color: #45CAF4;
+                    }
+                }
+            }
+            .item{
+                svg{
+                    width: 230px;
+                    transform: translate(-50%,-62%);
+                }
+                .stripes1{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-58%,-40%);
+                    transition-delay: 0.2s;
+                    transition: all 0.8s;
+                    img{
+                        top: 10%;
+                        right: 8%;
+                        width: 92px;
+                        position: absolute;
+                    }
+                }
+                .stripes2{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    opacity: 0;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-38%,-35%);
+                    transition-delay: 0.2s;
+                    transition: all 0.9s;
+                    img {
+                        left: 4%;
+                        top: 38.6%;
+                        width: 85px;
+                        position: absolute;
+                    }
+                }
+                .stripes3{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(60deg);
+                    transition-delay: 0.2s;
+                    transition: all 1s;
+                    img{
+                        right: 5%;
+                        bottom: 14%;
+                        width: 75px;
+                        position: absolute;
+                    }
+                }
+                .stripes4{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(45deg);
+                    transition-delay: 0.2s;
+                    transition: all 0.8s;
+                    img{
+                        top: 11%;
+                        left: 17%;
+                        width: 50px;
+                        position: absolute;
+                    }
+                }
+                .human-content{
+                    z-index: 3;
+                    opacity: 0;
+                    position: relative;
+                    transform: translate(0, 30%);
+                    transform-origin: center center;
+                    transition-property: all;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.2s;
+                    transition-timing-function:cubic-bezier(0.0, 0.0, 0.58, 1.0);
+                }
+                .human-gradient{
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    position: absolute;
+                    transform: translate(-7px,-1px);
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+                .human{
+                    z-index: 1;
+                    width: 298px;
+                    transform: translate(-7px,-1px);
+                    transform-origin: center center;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+            }
+        }
+        .body{
+            .title{
+                ul{
+                    li{
+                        color: #DF0345;
+                    }
+                }
+            }
+            .item{
+                svg{
+                    width: 230px;
+                    transform: translate(-52%,-75%);
+                }
+                .stripes1{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(60deg);
+                    transition-delay: 0.2s;
+                    transition: all 1s;
+                    img{
+                        top: 3%;
+                        right: -6%;
+                        width: 170px;
+                        position: absolute;
+                    }
+                }
+                .stripes2{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(90deg);
+                    transition-delay: 0.2s;
+                    transition: all 1s;
+                    img {
+                        top: 36%;
+                        left: -3%;
+                        width: 270px;
+                        position: absolute;
+                    }
+                }
+                .stripes3{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-70%,-90%);
+                    transition-delay: 0.2s;
+                    transition: all 0.8s;
+                    img{
+                        top: 21%;
+                        left: 4%;
+                        width: 100px;
+                        position: absolute;
+                    }
+                }
+                .stripes4{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(90deg);
+                    transition-delay: 0.2s;
+                    transition: all 0.7s;
+                    img{
+                        right: 8%;
+                        bottom: 16%;
+                        width: 80px;
+                        position: absolute;
+                    }
+                }
+                .human-content{
+                    z-index: 3;
+                    opacity: 0;
+                    position: relative;
+                    transform: translate(0, 30%);
+                    transform-origin: center center;
+                    transition-property: all;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.2s;
+                    transition-timing-function:cubic-bezier(0.0, 0.0, 0.58, 1.0);
+                }
+                .human-gradient{
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    position: absolute;
+                    transform: translate(1px,-9px);
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+                .human{
+                    z-index: 1;
+                    width: 242px;
+                    transform: translate(1px,-9px);
+                    transform-origin: center center;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+            }
+        }
+        .music{
+            .title{
+                ul{
+                    li{
+                        color: #5532FF;
+                    }
+                }
+            }
+            .item{
+                svg{
+                    width: 230px;
+                    transform: translate(-52%,-75%);
+                }
+                .stripes1{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    opacity: 0;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-58%,-90%);
+                    animation-delay: 0.3s;
+                    transition: all 1.2s;
+                    img{
+                        top: 0;
+                        right: 0;
+                        width: 92px;
+                        position: absolute;
+                    }
+                }
+                .stripes2{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-50%,-64%) rotate(-120deg);
+                    animation-delay: 0.3s;
+                    transition: all 1.4s;
+                    img {
+                        top: 47%;
+                        left: 1%;
+                        width: 58px;
+                        position: absolute;
+                    }
+                }
+                .stripes3{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    opacity: 0;
+                    transform: translate(-43%,-100%);
+                    animation-delay: 0.3s;
+                    transition: all 1.2s;
+                    img{
+                        top: 44%;
+                        left: 7%;
+                        width: 60px;
+                        position: absolute;
+                        transform: rotate(-44deg);
+                    }
+                }
+                .human-content{
+                    z-index: 3;
+                    opacity: 0;
+                    position: relative;
+                    transform: translate(0, 30%);
+                    transform-origin: center center;
+                    transition-property: all;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.2s;
+                    transition-timing-function:cubic-bezier(0.0, 0.0, 0.58, 1.0);
+                }
+                .human-gradient{
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    position: absolute;
+                    transform: translate(0,-31px);
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+                .human{
+                    z-index: 1;
+                    width: 262px;
+                    transform: translate(0,-31px);
+                    transform-origin: center center;
+                    transition-delay: 0.2s;
+                    transition: all 0.8s;
+                }
+            }
+        }
+        .philanthropy{
+            .title{
+                h2{
+                    font-size: 40px;
+                }
+                ul{
+                    li{
+                        color: #42CA80;
+                    }
+                }
+            }
+            .item{
+                svg{
+                    width: 230px;
+                    transform: translate(-52%, -55%);
+                }
+                .stripes1{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    opacity: 0;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-75%,-25%);
+                    animation-delay: 0.3s;
+                    transition: all 1.2s;
+                    img {
+                        top: 24%;
+                        right: -2%;
+                        width: 192px;
+                        position: absolute;
+                    }
+                }
+                .stripes2{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    opacity: 0;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-34%,-45%);
+                    animation-delay: 0.3s;
+                    transition: all 1.2s;
+                    img {
+                        top: 53%;
+                        left: 4%;
+                        width: 130px;
+                        position: absolute;
+                    }
+                }
+                .stripes3{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-25%,-25%);
+                    animation-delay: 0.3s;
+                    transition: all 1.4s;
+                    img {
+                        top: 13%;
+                        left: 12%;
+                        width: 74px;
+                        position: absolute;
+                    }
+                }
+                .stripes4{
+                    top: 50%;
+                    left: 50%;
+                    z-index: 3;
+                    width: 360px;
+                    height: 360px;
+                    position: absolute;
+                    transform: translate(-75%,-30%);
+                    animation-delay: 0.3s;
+                    transition: all 1.4s;
+                    img{
+                        right: 17%;
+                        bottom: 9%;
+                        width: 80px;
+                        position: absolute;
+                    }
+                }
+                .human-content{
+                    z-index: 3;
+                    opacity: 0;
+                    position: relative;
+                    transform: translate(0, 30%);
+                    transform-origin: center center;
+                    transition-property: all;
+                    transition-duration: 0.6s;
+                    transition-delay: 0.2s;
+                    transition-timing-function:cubic-bezier(0.0, 0.0, 0.58, 1.0);
+                }
+                .human-gradient{
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    width: 100%;
+                    position: absolute;
+                    transform: translate(38px,-11px);
+                    transition-duration: 0.6s;
+                    transition-delay: 0.4s;
+                }
+                .human{
+                    z-index: 1;
+                    width: 245px;
+                    transform: translate(38px,-11px);
+                    transform-origin: center center;
+                    transition-delay: 0.2s;
+                    transition: all 0.8s;
+                }
+            }
+        }
+        .slick-dots{
+            top: 138px;
+            left: 16px;
+            position: absolute;
+            li{
+                width: 7px;
+                height: 2px;
+                border: none;
+                margin: 12px 0;
+                text-indent: -9999px;
+                background: rgba(178, 180, 199, 0.45);
+                transition: all 0.4s;
+                &:first-child{
+                    margin-top: 0;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .slick-active{
+                width: 13px;
+                background: #1D1F3B;
+            }
+        }
+        .slick-active{
+            .business{
+                .stripes1{
+                    transform: translate(-50%,-64%) rotate(0deg);
+                }
+                .stripes2{
+                    transform: translate(-50%,-64%) rotate(0deg);
+                }
+                .stripes3{
+                    transform: translate(-50%,-64%) rotate(0deg);
+                }
+                .stripes4{
+                    transform: translate(-50%,-64%) rotate(0deg);
+                }
+                .item{
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                }
+            }
+            .soul{
+                .item{
+                    .stripes1{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2{
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes3{
+                        transform: translate(-50%,-64%) rotate(0);
+                    }
+                    .stripes4{
+                        transform: translate(-50%,-64%) rotate(0);
+                    }
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                }
+            }
+            .body{
+                .item{
+                    .stripes1{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes3{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes4{
+                        transform: translate(-50%,-64%);
+                    }
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                }
+            }
+            .music{
+                .stripes1{
+                    opacity: 1;
+                    transform: translate(-50%,-64%);
+                }
+                .stripes2{
+                    transform: translate(-50%,-64%) rotate(0);
+                }
+                .stripes3{
+                    opacity: 1;
+                    transform: translate(-50%,-64%);
+                }
+                .item{
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                }
+            }
+            .philanthropy{
+                .item{
+                    .stripes1{
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2{
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes3{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes4{
+                        transform: translate(-50%,-64%);
+                    }
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+
+        .home-slider {
+            .home-item {
+                .title {
+                    padding: 0 70px 45px;
+                    span {
+                        font-size: 36px;
+                        line-height: 40px;
+                    }
+                    h2 {
+                        font-size: 74px;
+                        line-height: 78px;
+                    }
+                    ul {
+                        li {
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+                .item {
+                    height: 640px;
+                    p {
+                        font-size: 10px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .business {
+                .item {
+                    .human {
+                        width: 220px;
+                    }
+                    svg {
+                        width: 320px;
+                        transform: translate(-50%,-74%);
+                    }
+                    .stripes1 {
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-50%,-64%) rotate(-85deg);
+                        img{
+                            right: -9%;
+                            bottom: 12%;
+                            width: 260px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-50%,-64%) rotate(-65deg);
+                        img{
+                            top: 7%;
+                            left: -5%;
+                            width: 190px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-50%,-64%) rotate(-85deg);
+                        img{
+                            left: 7%;
+                            bottom: 14%;
+                            width: 132px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 480px;
+                        height: 480px;
+                        display: block;
+                        transform: translate(-50%,-64%) rotate(-125deg);
+                        img{
+                            right: 0%;
+                            bottom: 20%;
+                            width: 178px;
+                        }
+                    }
+                    .business-stripes {
+                        width: 900px;
+                        height: 520px;
+                        transform: translate(-50%,-60%);
+                    }
+                }
+            }
+            .soul {
+                .item {
+                    .human-gradient{
+                        transform: translate(-15px,35px);
+                    }
+                    .human {
+                        width: 390px;
+                        transform: translate(-15px,35px);
+                    }
+                    svg {
+                        width: 320px;
+                        transform: translate(-50%,-74%);
+                    }
+                    .stripes1 {
+                        width: 480px;
+                        height: 480px;
+                        img{
+                            top: -5%;
+                            right: 2%;
+                            width: 170px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 480px;
+                        height: 480px;
+                        img {
+                            top: 25%;
+                            left: -1%;
+                            width: 150px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 480px;
+                        height: 480px;
+                        img{
+                            right: 4%;
+                            bottom: 16%;
+                            width: 85px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 480px;
+                        height: 480px;
+                        img {
+                            top: 2%;
+                            left: 10%;
+                            width: 86px;
+                        }
+                    }
+                }
+            }
+            .body {
+                .item {
+                    svg {
+                        width: 320px;
+                        transform: translate(-50%,-74%);
+                    }
+                    .stripes1 {
+                        width: 480px;
+                        height: 480px;
+                        img{
+                            top: 6%;
+                            right: -7%;
+                            width: 230px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 480px;
+                        height: 480px;
+                        img {
+                            top: 47%;
+                            left: -5%;
+                            width: 340px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 480px;
+                        height: 480px;
+                    }
+                    .stripes4 {
+                        width: 480px;
+                        height: 480px;
+                    }
+                    .human-gradient{
+                        transform: translate(-12px, 25px);
+                    }
+                    .human {
+                        width: 342px;
+                        transform: translate(-12px, 25px);
+                    }
+                }
+            }
+            .music {
+                .item {
+                    svg {
+                        width: 320px;
+                        transform: translate(-50%,-74%);
+                    }
+                    .stripes1 {
+                        width: 480px;
+                        height: 480px;
+                        img{
+                            top: 12%;
+                            right: -5%;
+                            width: 140px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 480px;
+                        height: 480px;
+                        img{
+                            top: 72%;
+                            left: 4%;
+                            width: 78px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 480px;
+                        height: 480px;
+                        img{
+                            top: 11%;
+                            left: 2%;
+                            width: 100px;
+                            transform: rotate(0);
+                        }
+                    }
+                    .human-gradient{
+                        transform: translate(0,15px);
+                    }
+                    .human {
+                        width: 340px;
+                        transform: translate(0,15px);
+                    }
+                }
+            }
+            .philanthropy {
+                .title {
+                    h2 {
+                        font-size: 60px;
+                    }
+                }
+                .item {
+                    svg {
+                        width: 320px;
+                        transform: translate(-50%,-55%);
+                    }
+                    .stripes1 {
+                        opacity: 0;
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-70%,-25%);
+                        img{
+                            top: 58%;
+                            right: 10%;
+                        }
+                    }
+                    .stripes2 {
+                        opacity: 0;
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-25%,-20%);
+                        img{
+                            top: 31%;
+                            left: -11%;
+                            width: 230px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-80%,-125%);
+                        img {
+                            top: 78%;
+                            left: 8%;
+                            width: 74px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 480px;
+                        height: 480px;
+                        transform: translate(-20%,44%);
+                        img {
+                            right: 4%;
+                            bottom: 82%;
+                            width: 80px;
+                        }
+                    }
+                    .human-gradient{
+                        transform: translate(20px,2px);
+                    }
+                    .human {
+                        width: 345px;
+                        transform: translate(20px,2px);
+                    }
+                }
+            }
+            .slick-dots {
+                top: 190px;
+                left: 40px;
+            }
+            .slick-active{
+                .business {
+                    .item {
+                        .stripes1 {
+                            transform: translate(-50%,-64%) rotate(0deg);
+                        }
+                        .stripes2 {
+                            transform: translate(-50%,-64%) rotate(0deg);
+                        }
+                        .stripes3 {
+                            transform: translate(-50%,-64%) rotate(0deg);
+                        }
+                        .stripes4 {
+                            transform: translate(-50%,-64%) rotate(0deg);
+                        }
+                    }
+                }
+                .soul {
+                    .item {
+                        
+                    }
+                }
+                .body {
+                    .item {
+                        
+                    }
+                } 
+                .music{
+                    .item{
+                        .stripes1 {
+                            opacity: 1;
+                            transform: translate(-50%,-64%);
+                        }
+                        .stripes2 {
+                            opacity: 1;
+                            transform: translate(-50%,-64%);
+                        }
+                        .stripes3 {
+                            transform: translate(-50%,-64%);
+                        }
+                        .stripes4 {
+                            transform: translate(-50%,-64%);
+                        }
+                    }
+                }
+                .philanthropy {
+                    .item {
+                        .stripes1 {
+                            opacity: 1;
+                            transform: translate(-50%,-64%);
+                        }
+                        .stripes2 {
+                            opacity: 1;
+                            transform: translate(-50%,-64%);
+                        }
+                        .stripes3 {
+                            transform: translate(-50%,-64%);
+                        }
+                        .stripes4 {
+                            transform: translate(-50%,-64%);
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+    @media (min-width: 1024px) {
+
+        .home-content{
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            transform: translate(0, 60px);
+        }
+        .home-nav{
+            display: block;
+            .nav-item{
+                top: 0;
+                left: 0;
+                z-index: 2;
+                cursor: pointer;
+                position: absolute;
+                transition: all 1s;
+                &:hover{
+                    h2{
+                        opacity: 1;
+                        filter: blur(0);
+                    }
+                }
+                &:nth-child(1){
+                    ul {
+                        li {
+                            color: #0066FF;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    ul {
+                        li {
+                            color: #45CAF4;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    ul {
+                        li {
+                            color: #DF0345;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    ul {
+                        li {
+                            color: #5532FF;
+                        }
+                    }
+                }
+                &:nth-child(5){
+                    ul {
+                        li {
+                            color: #42CA80;
+                        }
+                    }
+                }
+            }
+            span{
+                opacity: 0;
+                font-size: 18px;
+                font-weight: 300;
+                color: #b2b4c7;
+                line-height: 20px;
+                padding-left: 3px;
+                margin-bottom: 6px;
+                letter-spacing: .5px;
+                display: inline-block;
+                text-transform: uppercase;
+                font-family: 'Carmen Sans Thin';
+                transition: all 0.4s;
+            }
+            h2{
+                color: #1d1f3b;
+                font-weight: 800;
+                line-height: 62px;
+                margin-bottom: 4px;
+                letter-spacing: 1px;
+                font-family: 'Carmen Sans ExtraBold';
+                transition: all 0.4s;
+
+                
+                font-size: 40px;
+                filter: blur(2px);
+                background: linear-gradient(105.18deg, rgba(178, 180, 199, 0.49) 10.32%, rgba(178, 180, 199, 0) 97.86%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            ul{
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                transition: all 0.4s;
+                li{
+                    margin: 0 3px;
+                    font-size: 12px;
+                    color: #117FFE;
+                    font-weight: 500;
+                    line-height: 20px;
+                    font-family: 'Carmen Sans Medium';
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            .nav-item.active{
+                span{
+                    opacity: 1;
+                }
+                h2{
+                    opacity: 1;
+                    font-size: 56px;
+                    filter: blur(0);
+                    background: #1d1f3b;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                ul{
+                    opacity: 1;
+                }
+            }
+        }
+        .home-nav.business{
+            .nav-item{
+                &:nth-child(1){
+                    transform: translate(60px, 175px);
+                }
+                &:nth-child(2){
+                    transform: translate(190px, 30px);
+                }
+                &:nth-child(3){
+                    transform: translate(260px, 330px);
+                }
+                &:nth-child(4){
+                    transform: translate(680px, -20px);
+                }
+                &:nth-child(5){
+                    transform: translate(690px, 270px);
+                }
+            }
+        }
+        .home-nav.soul{
+            .nav-item{
+                &:nth-child(1){
+                    transform: translate(180px,330px);
+                }
+                &:nth-child(2){
+                    transform: translate(60px,176px);
+                }
+                &:nth-child(3){
+                    transform: translate(760px,268px);
+                }
+                &:nth-child(4){
+                    transform: translate(180px,30px);
+                }
+                &:nth-child(5){
+                    transform: translate(635px,-20px);
+                }
+            }
+        }
+        .home-nav.music{
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(720px,268px);
+                }
+                &:nth-child(2) {
+                    transform: translate(230px,330px);
+                }
+                &:nth-child(3) {
+                    transform: translate(660px,-20px);
+                }
+                &:nth-child(4) {
+                    transform: translate(60px,176px);
+                }
+                &:nth-child(5) {
+                    transform: translate(100px, 30px);
+                }
+            }
+        }
+        .home-nav.philanthropy{
+            .nav-item {
+                &:nth-child(1) {
+                    transform: translate(620px,-20px);
+                }
+                &:nth-child(2) {
+                    transform: translate(755px,265px);
+                }
+                &:nth-child(3) {
+                    transform: translate(220px,30px);
+                }
+                &:nth-child(4) {
+                    transform: translate(215px,330px);
+                }
+                &:nth-child(5) {
+                    transform: translate(60px, 175px);
+                    h2 {
+                        font-size: 44px;
+                    }
+                }
+            }
+        }
+        .home-nav.body{
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(175px, 30px);
+                }
+                &:nth-child(2) {
+                    transform: translate(655px, -20px);
+                }
+                &:nth-child(3) {
+                    transform: translate(60px, 176px);
+                }
+                &:nth-child(4) {
+                    transform: translate(740px, 265px);
+                }
+                &:nth-child(5) {
+                    transform: translate(120px, 335px);
+                }
+            }
+        }
+        .home-slider{
+            z-index: 1;
+            width: 100%;
+            height: 560px;
+            position: relative;
+            .home-item{
+                top: 50%;
+                left: 50%;
+                z-index: 0;
+                opacity: 0;
+                width: 100%;
+                height: 590px;
+                position: relative;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                transition: all .5s;
+                .title{
+                    display: none;
+                }
+                .item {
+                    height: 560px;
+                    a {
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .home-item.active{
+                opacity: 1;
+                z-index: 1;
+            }
+            .business {
+                .item {
+                    .human-content{
+                        transform: translate(0, 30%);
+                    }
+                    .human-gradient{
+                        opacity: 1;
+                        transform: translate(2px,-4px);
+                    }
+                    .human {
+                        opacity: 0;
+                        width: 200px;
+                        transform: translate(2px,-4px);
+                    }
+                    svg {
+                        transform: translate(-50%,-56%);
+                    }
+                    .stripes1 {
+                        transform: translate(-50%,-64%) rotate(-45deg);
+                        transition: 1.2s;
+                        img {
+                            right: 0%;
+                            bottom: 12%;
+                        }
+                    }
+                    .stripes2 {
+                        transform: translate(-50%,-64%) rotate(-80deg);
+                        transition: 1.4s;
+                        img {
+                            left: 0;
+                            top: 17%;
+                        }
+                    }
+                    .stripes3 {
+                        transform: translate(-50%,-64%) rotate(-40deg);
+                        transition: 1s;
+                        img {
+                            left: 12%;
+                            bottom: 5%;
+                        }
+                    }
+                    .stripes4 {
+                        transform: translate(-50%,-64%) rotate(-90deg);
+                        transition: 1.1s;
+                        img {
+                            right: 5%;
+                            bottom: 20%;
+                        }
+                    }
+                    .business-stripes {
+                        width: 800px;
+                        height: 540px;
+                        transform: translate(-50%,-58%);
+                    }
+                }
+            }
+            .business.active {
+                .item {
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0 , 0);
+                    }
+                    .human{
+                        opacity: 1;
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                    .stripes1 {
+                        transform: translate(-50%,-64%) rotate(0deg);
+                    }
+                    .stripes2 {
+                        transform: translate(-50%,-64%) rotate(0deg);
+                    }
+                    .stripes3 {
+                        transform: translate(-50%,-64%) rotate(0deg);
+                    }
+                    .stripes4 {
+                        transform: translate(-50%,-64%) rotate(0deg);
+                    }
+                }
+            }
+            .soul {
+                .item {
+                    .human-content{
+                        transform: translate(0, 30%);
+                    }
+                    .human-gradient{
+                        opacity: 1;
+                        transform: translate(-5px,45px);
+                    }
+                    .human {
+                        opacity: 0;
+                        width: 365px;
+                        transform: translate(-5px,45px);
+                    }
+                    svg {
+                        transform: translate(-50%,-56%);
+                    }
+                    .stripes1 {
+                        img{
+                            top: 18%;
+                            right: 8%;
+                        }
+                    }
+                    .stripes2 {
+                        img {
+                            top: 32%;
+                            left: 3%;
+                        }
+                    }
+                    .stripes3 {
+                        img{
+                            right: 4%;
+                            bottom: 16%;
+                        }
+                    }
+                    .stripes4 {
+                        img {
+                            top: 8%;
+                            left: 15%;
+                        }
+                    }
+                }
+            }
+            .soul.active {
+                .item {
+                    .stripes1{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2{
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes3{
+                        transform: translate(-50%,-64%) rotate(0);
+                    }
+                    .stripes4{
+                        transform: translate(-50%,-64%) rotate(0);
+                    }
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0 , 0);
+                    }
+                    .human{
+                        opacity: 1;
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                }
+            }
+            .body {
+                .item {
+                    svg {
+                        transform: translate(-50%,-56%);
+                    }
+                    .stripes1 {
+                        img {
+                            top: 17%;
+                            right: -8%;
+                        }
+                    }
+                    .stripes3 {
+                        img {
+                            top: 37%;
+                            left: 6%;
+                        }
+                    }
+                    .stripes4 {
+                        img{
+                            right: 10%;
+                            bottom: 9%;
+                        }   
+                    }
+                    .human-content{
+                        transform: translate(0, 30%);
+                    }
+                    .human-gradient{
+                        opacity: 1;
+                        transform: translate(2px,35px);
+                    }
+                    .human {
+                        opacity: 0;
+                        width: 318px;
+                        transform: translate(2px,35px);
+                    }
+                }
+            }
+            .body.active{
+                .item{
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0 , 0);
+                    }
+                    .human{
+                        opacity: 1;
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                    .stripes1{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes3{
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes4{
+                        transform: translate(-50%,-64%);
+                    }
+                }
+            }
+            .music {
+                .item {
+                    svg {
+                        transform: translate(-50%,-56%);
+                    }
+                    .stripes1 {
+                        img {
+                            top: 20%;
+                            right: -1%;
+                        }
+                    }
+                    .stripes2 {
+                        img {
+                            top: 65%;
+                            left: 8%;
+                        }
+                    }
+                    .stripes3 {
+                        img {
+                            top: 24%;
+                            left: 6%;
+                        }
+                    }
+                    .human-content{
+                        transform: translate(0, 30%);
+                    }
+                    .human-gradient{
+                        opacity: 1;
+                        transform: translate(0,23px);
+                    }
+                    .human {
+                        opacity: 0;
+                        width: 290px;
+                        transform: translate(0,23px);
+                    }
+                }
+            }
+            .music.active {
+                .item {
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0 , 0);
+                    }
+                    .human{
+                        opacity: 1;
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                    .stripes1{
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2{
+                        transform: translate(-50%,-64%) rotate(0);
+                    }
+                    .stripes3{
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                }
+            }
+            .philanthropy {
+                .item {
+                    svg {
+                        transform: translate(-50%,-56%);
+                    }
+                    .stripes2 {
+                        img {
+                            top: 33%;
+                            left: -7%;
+                            width: 230px;
+                        }
+                    }
+                    .human-content{
+                        transform: translate(0, 30%);
+                    }
+                    .human-gradient{
+                        opacity: 1;
+                        transform: translate(20px,20px);
+                    }
+                    .human {
+                        opacity: 0;
+                        width: 300px;
+                        transform: translate(20px,20px);
+                    }
+                }
+            }
+            .philanthropy.active {
+                .item {
+                    .human-content{
+                        opacity: 1;
+                        transform: translate(0 , 0);
+                    }
+                    .human{
+                        opacity: 1;
+                    }
+                    .human-gradient{
+                        opacity: 0;
+                    }
+                    .stripes1 {
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes2 {
+                        opacity: 1;
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes3 {
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes4 {
+                        transform: translate(-50%,-64%);
+                    }
+                }
+            }
+        }
+    
+    }
+    @media (min-width: 1300px) {
+    
+        .home-content {
+            width: 1200px;
+        }
+        .home-nav {
+            span {
+                font-size: 26px;
+                line-height: 28px;
+            }
+            h2 {
+                font-size: 48px;
+                line-height: 76px;
+            }
+            ul{
+                li{
+                    font-size: 14px;
+                }
+            }
+            .nav-item.active {
+                h2 {
+                    font-size: 66px;
+                }
+            }
+        }
+        .home-nav.business {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(25px,150px);
+                }
+                &:nth-child(2) {
+                    transform: translate(205px,0);
+                }
+                &:nth-child(3) {
+                    transform: translate(275px,290px);
+                }
+                &:nth-child(4) {
+                    transform: translate(790px,-30px);
+                }
+                &:nth-child(5) {
+                    transform: translate(880px, 210px);
+                }
+            }
+        }
+        .home-nav.soul {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(175px,290px);
+                }
+                &:nth-child(2) {
+                    transform: translate(25px,150px);
+                }
+                &:nth-child(3) {
+                    transform: translate(860px,210px);
+                }
+                &:nth-child(4) {
+                    transform: translate(208px,0);
+                }
+                &:nth-child(5) {
+                    transform: translate(735px, -30px);
+                }
+            }
+        }
+        .home-nav.music {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(850px,210px);
+                }
+                &:nth-child(2) {
+                    transform: translate(230px,290px);
+                }
+                &:nth-child(3) {
+                    transform: translate(760px,-30px);
+                }
+                &:nth-child(4) {
+                    transform: translate(25px,150px);
+                }
+                &:nth-child(5) {
+                    transform: translate(110px, 0px);
+                }
+            }
+        }
+        .home-nav.philanthropy {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(800px,-30px);
+                }
+                &:nth-child(2) {
+                    transform: translate(895px,210px);
+                }
+                &:nth-child(3) {
+                    transform: translate(195px,0px);
+                }
+                &:nth-child(4) {
+                    transform: translate(278px,290px);
+                }
+                &:nth-child(5) {
+                    transform: translate(25px,150px);
+                    h2{
+                        font-size: 52px;
+                    }
+                }
+            }
+        }
+        .home-nav.body {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(170px, 0);
+                }
+                &:nth-child(2) {
+                    transform: translate(770px, -30px);
+                }
+                &:nth-child(3) {
+                    transform: translate(25px,150px);
+                }
+                &:nth-child(4) {
+                    transform: translate(900px,210px);
+                }
+                &:nth-child(5) {
+                    transform: translate(115px,290px);
+                }
+            }
+        }
+        .home-slider {
+            .home-item {
+                .item {
+                    a {
+                        top: 50%;
+                        left: 50%;
+                        width: 480px;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+            }
+        }
+
+    }
+    @media (min-width: 1400px) {
+    
+        .home-content {
+            width: 1300px;
+        }
+        .home-nav {
+            span {
+                font-size: 42px;
+                line-height: 46px;
+            }
+            h2{
+                font-size: 44px;
+                line-height: 120px;
+                margin-bottom: 15px;
+            }
+            ul{
+                padding-left: 8px;
+                li{
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            .nav-item.active {
+                h2 {
+                    font-size: 98px;
+                }
+            }
+        }
+        .home-nav.business {
+            .nav-item {
+                &:nth-child(1) {
+                    transform: translate(5px, 142px);
+                }
+                &:nth-child(2) {
+                    transform: translate(220px, -30px);
+                }
+                &:nth-child(3) {
+                    transform: translate(280px, 330px);
+                }
+                &:nth-child(4) {
+                    transform: translate(940px, -65px);
+                }
+                &:nth-child(5) {
+                    transform: translate(1045px, 208px);
+                }
+            }
+        }
+        .home-nav.soul {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(255px,360px);
+                }
+                &:nth-child(2) {
+                    transform: translate(5px, 140px);
+                }
+                &:nth-child(3) {
+                    transform: translate(1050px, 330px);
+                }
+                &:nth-child(4) {
+                    transform: translate(218px, -40px);
+                }
+                &:nth-child(5) {
+                    transform: translate(995px, 16px);
+                }
+            }
+        }
+        .home-nav.music {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(1035px,270px);
+                }
+                &:nth-child(2) {
+                    transform: translate(250px,345px);
+                }
+                &:nth-child(3) {
+                    transform: translate(1010px,8px);
+                }
+                &:nth-child(4) {
+                    transform: translate(5px,140px);
+                }
+                &:nth-child(5) {
+                    transform: translate(185px, -40px);
+                }
+            }
+        }
+        .home-nav.philanthropy {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(940px, -10px);
+                }
+                &:nth-child(2) {
+                    transform: translate(1030px,280px);
+                }
+                &:nth-child(3) {
+                    transform: translate(222px, -40px);
+                }
+                &:nth-child(4) {
+                    transform: translate(258px,325px);
+                }
+                &:nth-child(5) {
+                    transform: translate(6px, 140px);
+                }
+            }
+        }
+        .home-nav.body {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(220px, -50px);
+                }
+                &:nth-child(2) {
+                    transform: translate(935px, 18px);
+                }
+                &:nth-child(3) {
+                    transform: translate(6px,142px);
+                }
+                &:nth-child(4) {
+                    transform: translate(1030px, 270px);
+                }
+                &:nth-child(5) {
+                    transform: translate(200px,340px);
+                }
+            }
+        }
+        .home-slider {
+            height: 590px;
+            .home-item {
+                .item {
+                    height: 590px;
+                    a {
+                        width: 560px;
+                    }
+                    p {
+                        font-size: 12px;
+                        line-height: 20px;
+                        letter-spacing: 20px;
+                        &:hover{
+                            letter-spacing: 7px;
+                        }
+                    }
+                }
+            }
+            .business {
+                .item {
+                    .human {
+                        width: 230px;
+                        transform: translate(0, -30px);
+                    }
+                    .human-gradient{
+                        transform: translate(0, -30px);
+                    }
+                    svg {
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes1 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            right: -8%;
+                            bottom: 6%;
+                            width: 320px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 11%;
+                            left: -9%;
+                            width: 220px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            left: 3%;
+                            bottom: 2%;
+                        }
+                    }
+                    .stripes4 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            right: 5%;
+                            bottom: 13%;
+                        }                        
+                    }
+                    .business-stripes {
+                        width: 1040px;
+                        height: 580px;
+                        transform: translate(-50%, -56%);
+                    }
+                }
+            }
+            .business.active{
+                .item {
+                    
+                }
+            } 
+            .soul {
+                .item {
+                    .human {
+                        width: 420px;
+                        transform: translate(-5px, 10px);
+                    }
+                    .human-gradient{
+                        transform: translate(-5px, 10px);
+                    }
+                    svg {
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes1 {
+                        width: 500px;
+                        height: 500px;
+                        transform: translate(-75%,-30%);
+                        img {
+                            top: 5%;
+                            right: -3%;
+                        }
+                    }
+                    .stripes2 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 25%;
+                            left: -5%;
+                        }
+                    }
+                    .stripes3 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            right: 0%;
+                            bottom: 14%;
+                        }
+                    }
+                    .stripes4 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 6%;
+                            left: 10%;
+                        }
+                    }
+                }
+            }
+            .soul.active {
+               
+            }
+            .body {
+                .item {
+                    svg {
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes1 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 9%;
+                            right: -15%;
+                            width: 280px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 45%;
+                            left: -8%;
+                            width: 400px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            left: 0;
+                            top: 26%;
+                            width: 130px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            right: 4%;
+                            bottom: 6%;
+                            width: 109px;
+                        }
+                    }
+                    .human {
+                        width: 365px;
+                        transform: translate(2px,5px);
+                    }
+                    .human-gradient{
+                        transform: translate(2px,5px);
+                    }
+                }
+            }
+            .body.active {
+                
+            }
+            .music {
+                .item {
+                    svg {
+                        transform: translate(-50%,-64%);
+                    }
+                    .stripes1 {
+                        width: 500px;
+                        height: 500px;
+                    }
+                    .stripes2 {
+                        width: 500px;
+                        height: 500px;
+                    }
+                    .stripes3 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 22%;
+                            left: 5%;
+                        }
+                    }
+                    .human {
+                        width: 330px;
+                        transform: translate(0, 8px);
+                    }
+                    .human-gradient{
+                        transform: translate(0, 8px);
+                    }
+                }
+            }
+            .music.active {
+                .item {
+                    
+                }
+            }
+            .philanthropy {
+                .item {
+                    svg {
+                        transform: translate(-50%,-58%);
+                    }
+                    .stripes1 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 50%;
+                            right: 10%;
+                            width: 230px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 20%;
+                            left: -18%;
+                            width: 300px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            top: 70%;
+                            left: 4%;
+                            width: 135px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 500px;
+                        height: 500px;
+                        img {
+                            right: 4%;
+                            bottom: 78%;
+                            width: 100px;
+                        }
+                    }
+                    .human {
+                        width: 340px;
+                        transform: translate(20px, -15px);
+                    }
+                    .human-gradient{
+                        transform: translate(20px, -15px);
+                    }
+                }
+            }
+            .philanthropy.active {
+                .item {
+                    
+                }
+            }
+        }
+    
+    }
+    @media (min-width: 1640px) {
+    
+        .home-nav.business {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(5px, 150px);
+                }
+                &:nth-child(2) {
+                    transform: translate(224px, -25px);
+                }
+                &:nth-child(3) {
+                    transform: translate(290px,350px);
+                }
+                &:nth-child(4) {
+                    transform: translate(945px,-102px);
+                }
+                &:nth-child(5) {
+                    transform: translate(1045px,215px);
+                }
+            }
+        }
+        .home-nav.soul {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(266px,390px);
+                }
+                &:nth-child(2) {
+                    transform: translate(5px,150px);
+                }
+                &:nth-child(3) {
+                    transform: translate(1032px,375px);
+                }
+                &:nth-child(4) {
+                    transform: translate(225px,-20px);
+                }
+                &:nth-child(5) {
+                    transform: translate(1010px,15px);
+                }
+            }
+        }
+        .home-nav.music {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(1035px,370px);
+                }
+                &:nth-child(2) {
+                    transform: translate(268px,395px);
+                }
+                &:nth-child(3) {
+                    transform: translate(1010px,15px);
+                }
+                &:nth-child(4) {
+                    transform: translate(5px,148px);
+                }
+                &:nth-child(5) {
+                    transform: translate(225px,-22px);
+                }
+            }
+        }
+        .home-nav.philanthropy {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(1010px,15px);
+                }
+                &:nth-child(2) {
+                    transform: translate(1032px,372px);
+                }
+                &:nth-child(3) {
+                    transform: translate(222px,-23px);
+                }
+                &:nth-child(4) {
+                    transform: translate(265px,390px);
+                }
+            }
+        }
+        .home-nav.body {
+            .nav-item{
+                &:nth-child(1) {
+                    transform: translate(222px, -20px);
+                }
+                &:nth-child(2) {
+                    transform: translate(1008px,20px);
+                }
+                &:nth-child(3) {
+                    transform: translate(6px,150px);
+                }
+                &:nth-child(5) {
+                    transform: translate(265px,390px);
+                }
+            }
+        }
+        .home-slider {
+            height: 665px;
+            .home-item {
+                height: 665px;
+                .item {
+                    height: 665px;
+                    p{
+                        bottom: 34px;
+                    }
+                    a {
+                        width: 560px;
+                        height: 110%;
+                        transform: translate(-48%,-57%);
+                    }
+                }
+            }
+            .business {
+                .item {
+                    .human {
+                        width: 263px;
+                        transform: translate(13px,-75px);
+                    }
+                    .human-gradient{
+                        transform: translate(13px,-75px);
+                    }
+                    svg {
+                        width: 370px;
+                        transform: translate(-47%,-67%);
+                    }
+                    .stripes1 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            right: -14%;
+                            bottom: 7%;
+                            width: 390px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 6%;
+                            left: -4%;
+                            width: 265px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            left: 8%;
+                            bottom: 11%;
+                        }
+                    }
+                    .stripes4 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            right: 7%;
+                            bottom: 14%;
+                        }
+                    }
+                    .business-stripes {
+                        width: 1260px;
+                        height: 600px;
+                        transform: translate(-48%,-58%);
+                    }
+                }
+            }
+            .soul {
+                .item {
+                    .human {
+                        width: 449px;
+                        transform: translate(0px,10px);
+                    }
+                    .human-gradient{
+                        transform: translate(0px,10px);
+                    }
+                    svg {
+                        width: 370px;
+                        transform: translate(-50%,-60%);
+                    }
+                    .stripes1 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 2%;
+                            right: -2%;
+                            width: 184px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 37%;
+                            left: 7%;
+                            width: 154px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            right: 2%;
+                            bottom: 9%;
+                            width: 120px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 11%;
+                            left: 19%;
+                            width: 108px;
+                        }
+                    }
+                }
+            }
+            .body {
+                .item {
+                    svg {
+                        width: 370px;
+                        transform: translate(-50%,-60%);
+                    }
+                    .stripes1 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 3%;
+                            right: -12%;
+                            width: 307px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 38%;
+                            left: -3%;
+                            width: 471px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 600px;
+                        height: 600px;
+                        img{
+                            top: 22%;
+                            left: 4%;
+                            width: 170px;
+                        }
+                    }
+                    .stripes4 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            right: 4%;
+                            bottom: 17%;
+                            width: 109px;
+                        }
+                    }
+                    .human {
+                        width: 422px;
+                        transform: translate(14px,-55px);
+                    }
+                    .human-gradient{
+                        transform: translate(14px,-55px);
+                    }
+                }
+            }
+            .music {
+                .item {
+                    svg {
+                        width: 370px;
+                        transform: translate(-50%,-70%);
+                    }
+                    .stripes1 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 17%;
+                            right: -11%;
+                            width: 178px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 64%;
+                            left: 7%;
+                            width: 109px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 15%;
+                            left: 9%;
+                            width: 119px;
+                        }
+                    }
+                    .human {
+                        width: 362px;
+                        transform: translate(34px,-5px);
+                    }
+                    .human-gradient{
+                        transform: translate(34px,-5px);
+                    }
+                }
+            }
+            .philanthropy {
+                .item {
+                    svg {
+                        width: 370px;
+                        transform: translate(-50%,-60%);
+                    }
+                    .stripes1 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 49%;
+                            right: 0;
+                            width: 266px;
+                        }
+                    }
+                    .stripes2 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 18%;
+                            left: -14%;
+                            width: 374px;
+                        }
+                    }
+                    .stripes3 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            top: 71%;
+                            left: 8%;
+                        }
+                    }
+                    .stripes4 {
+                        width: 600px;
+                        height: 600px;
+                        img {
+                            right: -5%;
+                            bottom: 82%;
+                        }
+                    }
+                    .human {
+                        width: 407px;
+                        transform: translate(83px,-48px);
+                    }
+                    .human-gradient{
+                        transform: translate(83px,-48px);
+                    }
+                }
+            }
+        }
+    }
+}
+

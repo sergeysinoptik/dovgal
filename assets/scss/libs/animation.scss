@@ -1,0 +1,289 @@
+@-webkit-keyframes rotating  {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotating2  {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+      -o-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+}
+@keyframes rotating2 {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+        -moz-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        -o-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+.rotation-left{
+    transform-origin: center center;
+    -webkit-animation: rotating 5s linear infinite;
+    -moz-animation: rotating 5s linear infinite;
+    -ms-animation: rotating 5s linear infinite;
+    -o-animation: rotating 5s linear infinite;
+    animation: rotating 5s linear infinite;
+}
+
+.rotation-right{
+    transform-origin: center center;
+    -webkit-animation: rotating2 5s linear infinite;
+    -moz-animation: rotating2 5s linear infinite;
+    -ms-animation: rotating2 5s linear infinite;
+    -o-animation: rotating2 5s linear infinite;
+    animation: rotating2 5s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes rotating-center  {
+  from {
+    -webkit-transform: translate(-50%,-50%) rotate(0deg);
+    -o-transform: translate(-50%,-50%) rotate(0deg);
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%,-50%) rotate(360deg);
+    -o-transform: translate(-50%,-50%) rotate(360deg);
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+@keyframes rotating-center {
+  from {
+    -ms-transform: translate(-50%,-50%) rotate(0deg);
+    -moz-transform: translate(-50%,-50%) rotate(0deg);
+    -webkit-transform: translate(-50%,-50%) rotate(0deg);
+    -o-transform: translate(-50%,-50%) rotate(0deg);
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to {
+    -ms-transform: translate(-50%,-50%) rotate(360deg);
+    -moz-transform: translate(-50%,-50%) rotate(360deg);
+    -webkit-transform: translate(-50%,-50%) rotate(360deg);
+    -o-transform: translate(-50%,-50%) rotate(360deg);
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotating-center2  {
+  from {
+    -webkit-transform: translate(-50%,-50%) rotate(0deg);
+    -o-transform: translate(-50%,-50%) rotate(0deg);
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%,-50%) rotate(-360deg);
+    -o-transform: translate(-50%,-50%) rotate(-360deg);
+    transform: translate(-50%,-50%) rotate(-360deg);
+  }
+}
+@keyframes rotating-center2 {
+  from {
+    -ms-transform: translate(-50%,-50%) rotate(0deg);
+    -moz-transform: translate(-50%,-50%) rotate(0deg);
+    -webkit-transform: translate(-50%,-50%) rotate(0deg);
+    -o-transform: translate(-50%,-50%) rotate(0deg);
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to {
+      -webkit-transform: translate(-50%,-50%) rotate(-360deg);
+      -moz-transform: translate(-50%,-50%) rotate(-360deg);
+      -ms-transform: translate(-50%,-50%) rotate(-360deg);
+      -o-transform: translate(-50%,-50%) rotate(-360deg);
+      transform: translate(-50%,-50%) rotate(-360deg);
+  }
+}
+
+
+
+@-webkit-keyframes rotating-top  {
+  0% {
+    -ms-transform: translate(0, -5%);
+    -moz-transform: translate(0, -5%);
+    -webkit-transform: translate(0, -5%);
+    -o-transform: translate(0, -5%);
+    transform: translate(0, -5%);
+  }
+  50% {
+    -ms-transform: translate(0, 5%);
+    -moz-transform: translate(0, 5%);
+    -webkit-transform: translate(0, 5%);
+    -o-transform: translate(0, 5%);
+    transform: translate(0, 5%);
+  }
+  100% {
+    -ms-transform: translate(0, -5%);
+    -moz-transform: translate(0, -5%);
+    -webkit-transform: translate(0, -5%);
+    -o-transform: translate(0, -5%);
+    transform: translate(0, -5%);
+  }
+}
+@keyframes rotating-top {
+  0% {
+    -ms-transform: translate(0, -5%);
+    -moz-transform: translate(0, -5%);
+    -webkit-transform: translate(0, -5%);
+    -o-transform: translate(0, -5%);
+    transform: translate(0, -5%);
+  }
+  50% {
+    -ms-transform: translate(0, 5%);
+    -moz-transform: translate(0, 5%);
+    -webkit-transform: translate(0, 5%);
+    -o-transform: translate(0, 5%);
+    transform: translate(0, 5%);
+  }
+  100% {
+    -ms-transform: translate(0, -5%);
+    -moz-transform: translate(0, -5%);
+    -webkit-transform: translate(0, -5%);
+    -o-transform: translate(0, -5%);
+    transform: translate(0, -5%);
+  }
+}
+
+@-webkit-keyframes rotating-left  {
+  0% {
+    -ms-transform: translate(-5%, 0);
+    -moz-transform: translate(-5%, 0);
+    -webkit-transform: translate(-5%, 0);
+    -o-transform: translate(-5%, 0);
+    transform: translate(-5%, 0);
+  }
+  50% {
+    -ms-transform: translate(5%, 0);
+    -moz-transform: translate(5%, 0);
+    -webkit-transform: translate(5%, 0);
+    -o-transform: translate(5%, 0);
+    transform: translate(5%, 0);
+  }
+  100% {
+    -ms-transform: translate(-5%, 0);
+    -moz-transform: translate(-5%, 0);
+    -webkit-transform: translate(-5%, 0);
+    -o-transform: translate(-5%, 0);
+    transform: translate(-5%, 0);
+  }
+}
+@keyframes rotating-left {
+  0% {
+    -ms-transform: translate(-5%, 0);
+    -moz-transform: translate(-5%, 0);
+    -webkit-transform: translate(-5%, 0);
+    -o-transform: translate(-5%, 0);
+    transform: translate(-5%, 0);
+  }
+  50% {
+    -ms-transform: translate(5%, 0);
+    -moz-transform: translate(5%, 0);
+    -webkit-transform: translate(5%, 0);
+    -o-transform: translate(5%, 0);
+    transform: translate(5%, 0);
+  }
+  100% {
+    -ms-transform: translate(-5%, 0);
+    -moz-transform: translate(-5%, 0);
+    -webkit-transform: translate(-5%, 0);
+    -o-transform: translate(-5%, 0);
+    transform: translate(-5%, 0);
+  }
+}
+
+@-webkit-keyframes rotating-top2  {
+  0% {
+    -ms-transform: translate(-50%, -55%);
+    -moz-transform: translate(-50%, -55%);
+    -webkit-transform: translate(-50%, -55%);
+    -o-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+  }
+  50% {
+    -ms-transform: translate(-50%, -45%);
+    -moz-transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    -o-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+  }
+  100% {
+    -ms-transform: translate(-50%, -55%);
+    -moz-transform: translate(-50%, -55%);
+    -webkit-transform: translate(-50%, -55%);
+    -o-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+  }
+}
+@keyframes rotating-top2 {
+  0% {
+    -ms-transform: translate(-50%, -55%);
+    -moz-transform: translate(-50%, -55%);
+    -webkit-transform: translate(-50%, -55%);
+    -o-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+  }
+  50% {
+    -ms-transform: translate(-50%, -45%);
+    -moz-transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    -o-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+  }
+  100% {
+    -ms-transform: translate(-50%, -55%);
+    -moz-transform: translate(-50%, -55%);
+    -webkit-transform: translate(-50%, -55%);
+    -o-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+  }
+}
